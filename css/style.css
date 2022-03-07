@@ -1,0 +1,128 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll;
+    /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+/* --------------------------------------------------- */
+
+body {
+	font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+/* ここから書く */
+/* header */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(190, 204, 158, 0.76);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+header .logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+header ul {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+header nav {
+    width: 50%;
+}
+
+/* main_visual */
+#main_visual {
+    width: 100%;
+    height: 95vh;
+    background: no-repeat center center;
+    background-size: cover;
+    background-image: url("../img/alex-lvrs-JJKEQgcNzS4-unsplash\ \(1\).jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main_visual {
+    font-size: 48px;
+    font-weight: 700;
+    color: beige;
+}
+
+/* 複数に設定 よしなに余白*/
+#about,#gallary,#info {
+    width: 80%;
+    margin: 100px auto;
+}
+
+/* about */
+#about img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    /* 縦横比を保ってくれる */
+}
+#about,#info {
+    display: flex;
+    align-items: center;
+}
+#about .about_box,#info .info_box {
+    width: 50%;
+    padding: 30px;
+}
+
+/* gallary */
+#gallery .gallery_images {
+    width: 90%;
+    column-count: 3;
+    column-gap: 0;
+    margin: 0 auto;
+}
+#gallery .gallery_images .item {
+    padding: 5px;
+}
+#gallery .gallery_images .img {
+    width: 100%;
+}
+
+/* responsive */
+
+@media screen and(max-width:500px) {
+    #about, #info {
+        flex-direction: colum;
+    }
+    #info iframe {
+        width: 100%;
+    }
+}
